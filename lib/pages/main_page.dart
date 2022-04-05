@@ -1,3 +1,5 @@
+import 'package:dash_board/widgets/circle_clip.dart';
+import 'package:dash_board/widgets/col_iconText.dart';
 import 'package:dash_board/widgets/each_setting_bar.dart';
 import 'package:dash_board/widgets/icon_and_text.dart';
 import 'package:dash_board/widgets/tools.dart';
@@ -101,6 +103,52 @@ class MainPage extends StatelessWidget {
                 height: 2,
               ),
               Tools(),
+              Expanded(
+                child: Container(
+                  color: Color(0xff115767),
+                  width: double.maxFinite,
+                  padding: EdgeInsets.only(bottom: 20),
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        bottom: -80,
+                        left: 55,
+                        child: CircleClip(),
+                      ),
+                      Positioned(
+                        left: 50,
+                        right: 50,
+                        bottom: 0,
+                        child: Icon(
+                          Icons.keyboard_arrow_down_rounded,
+                          color: Colors.white,
+                          size: 60,
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 30,
+                        left: 15,
+                        child: ColIconText(icon: Icons.description, text: "Description"),
+                      ),
+                      Positioned(
+                        bottom: 30,
+                        right: 20,
+                        child: ColIconText(icon: Icons.location_on, text: "Location"),
+                      ),
+                      Positioned(
+                        top: 130,
+                        left: 100,
+                        child: ColIconText(icon: Icons.check_circle, text: "Check"),
+                      ),
+                      Positioned(
+                        top: 130,
+                        right: 100,
+                        child: ColIconText(icon: Icons.flag, text: "County"),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
