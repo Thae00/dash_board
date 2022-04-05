@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'icon_and_text.dart';
 
 class LeftSide extends StatelessWidget {
-  LeftSide({Key? key}) : super(key: key);
+  final IconData icon;
+  LeftSide({Key? key,required this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconAndText(icon: Icons.question_mark_sharp, text: "305", iconColor: Colors.white,),
+        IconAndText(icon: icon, text: "305", iconColor: Colors.white,),
         SizedBox(width: 20,),
         VerticalDivider(
           color: Colors.white54, width: 10, //width space of divider

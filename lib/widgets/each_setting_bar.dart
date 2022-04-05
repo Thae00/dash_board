@@ -4,19 +4,22 @@ import 'package:dash_board/widgets/right_side.dart';
 import 'package:flutter/material.dart';
 
 class EachSettingBar extends StatelessWidget {
-  EachSettingBar({Key? key}) : super(key: key);
+  final IconData icon;
+  final String text;
+  final AssetImage image;
+  EachSettingBar({Key? key,required this.icon,required this.text, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Color(0xFF5E8C9F),
-      height: 60,
+      height: 65,
       padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          LeftSide(),
-          RightSide(),
+          LeftSide(icon: icon,),
+          RightSide(text: text, image: image),
         ],
       ),
     );

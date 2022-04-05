@@ -1,5 +1,6 @@
 import 'package:dash_board/widgets/each_setting_bar.dart';
 import 'package:dash_board/widgets/icon_and_text.dart';
+import 'package:dash_board/widgets/tools.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -39,14 +40,16 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 15,),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 15,
+                ),
                 height: 80,
                 child: Row(
                   children: [
                     Container(
                       padding: EdgeInsets.only(right: 10),
                       child: IconAndText(
-                          icon: Icons.work,
+                          icon: Icons.pan_tool_alt_sharp,
                           iconColor: Colors.white,
                           text: "Department Jobs"),
                     ),
@@ -59,14 +62,45 @@ class MainPage extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.only(left: 30),
                       child: IconAndText(
-                          icon: Icons.work,
+                          icon: Icons.people_alt_outlined,
                           iconColor: Colors.white54,
                           text: "My Jobs"),
                     ),
                   ],
                 ),
               ),
-              EachSettingBar(),
+              Container(
+                color: Colors.white10, //width space of divider
+                height: 1,
+              ),
+              EachSettingBar(
+                icon: Icons.question_mark,
+                text: '2',
+                image: AssetImage("assets/logo/learn.png"),
+              ),
+              Container(
+                color: Colors.white10, //width space of divider
+                height: 1,
+              ),
+              EachSettingBar(
+                icon: Icons.pan_tool_alt_outlined,
+                text: '1',
+                image: AssetImage("assets/logo/bear.jpg"),
+              ),
+              Container(
+                color: Colors.white10, //width space of divider
+                height: 1,
+              ),
+              EachSettingBar(
+                icon: Icons.lock_clock,
+                text: '2',
+                image: AssetImage("assets/logo/ba.png"),
+              ),
+              Container(
+                color: Colors.white10, //width space of divider
+                height: 2,
+              ),
+              Tools(),
             ],
           ),
         ),
