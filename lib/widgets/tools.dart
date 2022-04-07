@@ -1,3 +1,5 @@
+import 'package:dash_board/utils/dimensions.dart';
+import 'package:dash_board/widgets/col_iconText.dart';
 import 'package:dash_board/widgets/icon_and_text.dart';
 import 'package:dash_board/widgets/left_side.dart';
 import 'package:dash_board/widgets/text_and_icon.dart';
@@ -11,32 +13,35 @@ class Tools extends StatelessWidget {
     return Row(
       children: [
         Container(
+          padding: EdgeInsets.symmetric(horizontal: Dimensions.width10, vertical: Dimensions.height5),
           color: Color.fromARGB(255, 5, 70, 124),
-          width: 80,
-          height: 60,
-          child: TextIcon(
-            text: 'baba',
-            icon: Icons.pan_tool_alt_outlined,
-          ),
+          child: ColIconText(icon: Icons.pan_tool_alt_outlined, text: "baba"),
         ),
         Container(
+          padding: EdgeInsets.symmetric(horizontal: Dimensions.width10, vertical: Dimensions.height5),
           color: Color.fromARGB(255, 217, 149, 12),
-          width: 80,
-          height: 60,
-          child: TextIcon(text: 'Dadar', icon: Icons.lock_clock),
+          child: ColIconText(icon: Icons.lock_clock, text: "Dadar"),
         ),
         Container(
+          padding: EdgeInsets.symmetric(horizontal: Dimensions.width10, vertical: Dimensions.height5),
           color: Color.fromARGB(255, 5, 104, 8),
-          width: 80,
-          height: 60,
-          child: TextIcon(
-            text: 'Cacar:',
-            icon: Icons.mark_as_unread_sharp,
-          ),
+          child: ColIconText(icon: Icons.mark_as_unread_sharp, text: "Cacar"),
+        ),
+        IconAndText(icon: Icons.lock_clock, text: "305", iconColor: Colors.white,),
+        // VerticalDivider(
+        //   color: Colors.white54, width: 15, //width space of divider
+        //   thickness: 3,
+        // ),
+        SizedBox(width: 15,),
+        Container(
+          width: 3,
+          color: Colors.white54,
+          height: Dimensions.height50,
         ),
         Container(
-          child: LeftSide(icon: Icons.lock_clock),
-        )
+          padding: EdgeInsets.only(left: Dimensions.width10),
+          child: Text("Question",style: TextStyle(fontSize: Dimensions.font20,color: Colors.white54),),
+        ),
       ],
     );
   }

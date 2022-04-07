@@ -1,3 +1,4 @@
+import 'package:dash_board/utils/dimensions.dart';
 import 'package:dash_board/widgets/icon_and_text.dart';
 import 'package:dash_board/widgets/left_side.dart';
 import 'package:dash_board/widgets/right_side.dart';
@@ -13,7 +14,7 @@ class EachSettingBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Color(0xFF5E8C9F),
-      height: 65,
+      height: Dimensions.height65,
       padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

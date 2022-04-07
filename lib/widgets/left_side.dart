@@ -1,3 +1,4 @@
+import 'package:dash_board/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 import 'icon_and_text.dart';
@@ -13,11 +14,11 @@ class LeftSide extends StatelessWidget {
         IconAndText(icon: icon, text: "305", iconColor: Colors.white,),
         SizedBox(width: 20,),
         VerticalDivider(
-          color: Colors.white54, width: 10, //width space of divider
+          color: Colors.white54, width: Dimensions.width10, //width space of divider
           thickness: 2,
         ),
         Container(
-          padding: EdgeInsets.only(left: 10),
+          padding: EdgeInsets.only(left: Dimensions.width10),
           child: Text("Question",style: TextStyle(fontSize: 20,color: Colors.white54),),
         ),
       ],

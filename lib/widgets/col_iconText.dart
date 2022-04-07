@@ -1,3 +1,4 @@
+import 'package:dash_board/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class ColIconText extends StatelessWidget {
@@ -12,7 +13,7 @@ class ColIconText extends StatelessWidget {
             Icon(
               icon,
               color: Colors.white,
-              size: 45,
+              size: Dimensions.iconSize45,
             ),
             SizedBox(
               height: 5,
@@ -20,7 +21,7 @@ class ColIconText extends StatelessWidget {
             Text(
               text,
               style: TextStyle(
-                fontSize: 18,
+                fontSize: Dimensions.font18,
                 color: Colors.white54,
               ),
             ),

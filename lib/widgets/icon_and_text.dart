@@ -1,3 +1,4 @@
+import 'package:dash_board/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class IconAndText extends StatelessWidget {
@@ -17,12 +18,11 @@ class IconAndText extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 10),
       child: Row(
-       
         children: [
           Icon(
             icon,
             color: iconColor,
-            size: 30,
+            size: Dimensions.iconSize40,
           ),
           SizedBox(
             width: 5,
@@ -30,7 +30,7 @@ class IconAndText extends StatelessWidget {
           Text(
             text,
             style: TextStyle(
-              fontSize: 20,
+              fontSize: Dimensions.font20,
               color: Colors.white54,
             ),
           ),

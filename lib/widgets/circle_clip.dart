@@ -1,3 +1,4 @@
+import 'package:dash_board/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class CircleClip extends StatelessWidget {
@@ -9,26 +10,26 @@ class CircleClip extends StatelessWidget {
           child: ClipPath(
             clipper: CustomHalfCircleClipper(),
             child: Container(
-              height: 300.0,
-              width: 300.0,
+              height: Dimensions.height300,
+              width: Dimensions.width300,
               decoration: BoxDecoration(
                   color: Colors.white54,
-                  borderRadius: BorderRadius.circular(150.0)),
+                  borderRadius: BorderRadius.circular(Dimensions.radius150)),
             ),
           ),
         ),
         Positioned(
-          top: 3,
-          right: 3,
-          left: 3,
+          top: Dimensions.height3,
+          right: Dimensions.width3,
+          left: Dimensions.width3,
           child: ClipPath(
             clipper: CustomHalfCircleClipper(),
             child: Container(
-              height: 300.0,
-              width: 300.0,
+              height: Dimensions.height300,
+              width: Dimensions.width300,
               decoration: BoxDecoration(
                   color: Color(0xff115767),
-                  borderRadius: BorderRadius.circular(150.0)),
+                  borderRadius: BorderRadius.circular(Dimensions.radius150)),
             ),
           ),
         ),
