@@ -70,7 +70,8 @@ class _MainPageState extends State<MainPage> {
                           text: "Department Jobs"),
                     ),
                     VerticalDivider(
-                      color: Colors.white54, width: Dimensions.width10, //width space of divider
+                      color: Colors.white54,
+                      width: Dimensions.width10, //width space of divider
                       thickness: 2, //thickness of divier line
                       indent: 10, //Spacing at the top of divider.
                       endIndent: 10,
@@ -131,35 +132,84 @@ class _MainPageState extends State<MainPage> {
                       Positioned(
                         left: Dimensions.width50,
                         right: Dimensions.width50,
-                        bottom: 0,
+                        bottom: Dimensions.height10,
                         child: InkWell(
                           onTap: (){
                             setState(() {
                               _bool = !_bool;
+                              print(_bool);
                             });
-                            print("this is ${_bool}");
                           },
-                          child: Icon(
-                            Icons.arrow_drop_down_circle,
-                            color: Colors.white,
-                            size: Dimensions.iconSize50,
+                          child: CircleAvatar(
+                            radius: 28,
+                            backgroundColor: Colors.white,
+                            child: _bool ? CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Color(0xff115767),
+                              child: Container(
+                                child: Icon(
+                                  Icons.keyboard_arrow_down,
+                                  size: Dimensions.iconSize50,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ) : Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white,
+                                    spreadRadius: 8,
+                                    blurRadius: 10,
+                                    offset: Offset(1, 2),
+                                  ),
+                                ],
+                              ),
+                              child: CircleAvatar(
+                                radius: 25,
+                                backgroundColor: Color(0xff115767),
+                                child: Container(
+                                  child: Icon(
+                                    Icons.keyboard_arrow_down,
+                                    size: Dimensions.iconSize50,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
+                        // child: InkWell(
+                        //   onTap: (){
+                        //     setState(() {
+                        //       _bool = !_bool;
+                        //     });
+                        //     print("this is ${_bool}");
+                        //   },
+                        //   child: Icon(
+                        //     Icons.arrow_drop_down_circle,
+                        //     color: Colors.white,
+                        //     size: Dimensions.iconSize50,
+                        //   ),
+                        // ),
                       ),
                       Positioned(
                         bottom: Dimensions.height25,
                         left: Dimensions.width15,
-                        child: ColIconText(icon: Icons.description, text: "Description"),
+                        child: ColIconText(
+                            icon: Icons.description, text: "Description"),
                       ),
                       Positioned(
                         bottom: Dimensions.height25,
                         right: Dimensions.width28,
-                        child: ColIconText(icon: Icons.location_on, text: "Location"),
+                        child: ColIconText(
+                            icon: Icons.location_on, text: "Location"),
                       ),
                       Positioned(
                         top: Dimensions.height100,
                         left: Dimensions.width100,
-                        child: ColIconText(icon: Icons.check_circle, text: "Check"),
+                        child: ColIconText(
+                            icon: Icons.check_circle, text: "Check"),
                       ),
                       Positioned(
                         top: Dimensions.height100,
