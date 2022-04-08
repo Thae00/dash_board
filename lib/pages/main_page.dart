@@ -4,7 +4,9 @@ import 'package:dash_board/widgets/col_iconText.dart';
 import 'package:dash_board/widgets/each_setting_bar.dart';
 import 'package:dash_board/widgets/icon_and_text.dart';
 import 'package:dash_board/widgets/tools.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key}) : super(key: key);
@@ -25,11 +27,6 @@ class _MainPageState extends State<MainPage> {
           color: Color(0xFF7898B1),
           child: Column(
             children: [
-              // Container(
-              //   width: Dimensions.mainPageWidth,
-              //   height: Dimensions.mainPageHeight,
-              //   child: UpperPage(),
-              // ),
               Container(
                 padding: EdgeInsets.all(10),
                 child: Row(
@@ -65,8 +62,7 @@ class _MainPageState extends State<MainPage> {
                     Container(
                       padding: EdgeInsets.only(right: 10),
                       child: IconAndText(
-                          icon: Icons.pan_tool_alt_sharp,
-                          iconColor: Colors.white,
+                          svgIcon: SvgPicture.asset("assets/icons/briefcase.svg", color: Colors.white,),
                           text: "Department Jobs"),
                     ),
                     VerticalDivider(
@@ -79,8 +75,7 @@ class _MainPageState extends State<MainPage> {
                     Container(
                       padding: EdgeInsets.only(left: Dimensions.width20),
                       child: IconAndText(
-                          icon: Icons.people_alt_outlined,
-                          iconColor: Colors.white54,
+                          svgIcon: SvgPicture.asset("assets/icons/briefcase.svg", color: Colors.white,),
                           text: "My Jobs"),
                     ),
                   ],
@@ -91,7 +86,7 @@ class _MainPageState extends State<MainPage> {
                 height: 1,
               ),
               EachSettingBar(
-                icon: Icons.question_mark,
+                svgIcon: SvgPicture.asset("assets/icons/briefcase.svg", color: Colors.white,),
                 text: '2',
                 image: AssetImage("assets/logo/learn.png"),
               ),
@@ -100,7 +95,7 @@ class _MainPageState extends State<MainPage> {
                 height: 1,
               ),
               EachSettingBar(
-                icon: Icons.pan_tool_alt_outlined,
+                svgIcon: SvgPicture.asset("assets/icons/briefcase.svg", color: Colors.white,),
                 text: '1',
                 image: AssetImage("assets/logo/bear.jpg"),
               ),
@@ -109,7 +104,7 @@ class _MainPageState extends State<MainPage> {
                 height: 1,
               ),
               EachSettingBar(
-                icon: Icons.lock_clock,
+                svgIcon: SvgPicture.asset("assets/icons/briefcase.svg", color: Colors.white,),
                 text: '2',
                 image: AssetImage("assets/logo/ba.png"),
               ),
@@ -179,19 +174,6 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ),
                         ),
-                        // child: InkWell(
-                        //   onTap: (){
-                        //     setState(() {
-                        //       _bool = !_bool;
-                        //     });
-                        //     print("this is ${_bool}");
-                        //   },
-                        //   child: Icon(
-                        //     Icons.arrow_drop_down_circle,
-                        //     color: Colors.white,
-                        //     size: Dimensions.iconSize50,
-                        //   ),
-                        // ),
                       ),
                       Positioned(
                         bottom: Dimensions.height25,

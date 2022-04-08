@@ -1,16 +1,15 @@
 import 'package:dash_board/utils/dimensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class IconAndText extends StatelessWidget {
-  final IconData icon;
+  final SvgPicture svgIcon;
   final String text;
-  final Color iconColor;
 
   IconAndText({
     Key? key,
-    required this.icon,
+    required this.svgIcon,
     required this.text,
-    required this.iconColor,
   }) : super(key: key);
 
   @override
@@ -19,11 +18,7 @@ class IconAndText extends StatelessWidget {
       padding: EdgeInsets.only(left: 10),
       child: Row(
         children: [
-          Icon(
-            icon,
-            color: iconColor,
-            size: Dimensions.iconSize40,
-          ),
+          svgIcon,
           SizedBox(
             width: 5,
           ),

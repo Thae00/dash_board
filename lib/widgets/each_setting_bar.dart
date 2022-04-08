@@ -3,12 +3,13 @@ import 'package:dash_board/widgets/icon_and_text.dart';
 import 'package:dash_board/widgets/left_side.dart';
 import 'package:dash_board/widgets/right_side.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class EachSettingBar extends StatelessWidget {
-  final IconData icon;
+  final SvgPicture svgIcon;
   final String text;
   final AssetImage image;
-  EachSettingBar({Key? key,required this.icon,required this.text, required this.image}) : super(key: key);
+  EachSettingBar({Key? key, required this.svgIcon, required this.text, required this.image,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class EachSettingBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          LeftSide(icon: icon,),
+          LeftSide(svgIcon: svgIcon,),
           RightSide(text: text, image: image),
         ],
       ),

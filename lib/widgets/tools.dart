@@ -27,7 +27,7 @@ class Tools extends StatelessWidget {
           color: Color.fromARGB(255, 5, 104, 8),
           child: ColIconText(icon: Icons.mark_as_unread_sharp, text: "Cacar"),
         ),
-        IconAndText(icon: Icons.lock_clock, text: "305", iconColor: Colors.white,),
+        //IconAndText(icon: Icons.lock_clock, text: "305", iconColor: Colors.white,),
         // VerticalDivider(
         //   color: Colors.white54, width: 15, //width space of divider
         //   thickness: 3,
