@@ -7,9 +7,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class EachSettingBar extends StatelessWidget {
   final SvgPicture svgIcon;
+  final String numText;
   final String text;
+  final String strText;
   final AssetImage image;
-  EachSettingBar({Key? key, required this.svgIcon, required this.text, required this.image,}) : super(key: key);
+  EachSettingBar({Key? key, required this.svgIcon, required this.numText, required this.strText,required this.text, required this.image, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class EachSettingBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          LeftSide(svgIcon: svgIcon,),
+          LeftSide(svgIcon: svgIcon,numText: numText, strText: strText,),
           RightSide(text: text, image: image),
         ],
       ),

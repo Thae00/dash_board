@@ -20,7 +20,7 @@ class IconAndText extends StatelessWidget {
         children: [
           svgIcon,
           SizedBox(
-            width: 5,
+            width: 10,
           ),
           Text(
             text,
